@@ -1,125 +1,70 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Tarique's engineering lab — systems, frontend, AI and things that ship." />
-  <title>Tarique — Engineering Lab</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tarique Hussain — Senior Software Engineer</title>
+<style>
+:root{--bg:#05070b;--fg:#f5f5f7;--muted:#969aa6;--line:#1b1e27;--violet:#9b7cff;--cyan:#65d9ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.nav{position:fixed;z-index:20;top:0;left:0;right:0;height:72px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(5,7,11,.55);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+.logo{font-size:25px;font-weight:900;letter-spacing:-2px}.logo i{display:block;width:28px;height:2px;background:var(--violet);margin-top:5px}.links{display:flex;gap:28px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#d5d6dc}.links a{opacity:.8;transition:.2s}.links a:hover{color:white;opacity:1}
+.hero{height:150vh;position:relative}.sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:grid;place-items:center}.sky{position:absolute;inset:0;background:radial-gradient(circle at 70% 22%,rgba(88,78,151,.22),transparent 25%),radial-gradient(circle at 25% 65%,rgba(30,90,120,.13),transparent 30%),linear-gradient(#03050a,#080b11 70%,#040508)}
+.stars{position:absolute;inset:0;opacity:.65;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#aaa 1px,transparent 1px);background-size:130px 130px,210px 210px;background-position:20px 30px,80px 110px}
+.mountain{position:absolute;left:-5%;right:-5%;bottom:-7%;height:48%;background:linear-gradient(145deg,transparent 8%,#080b11 8% 28%,transparent 28% 38%,#090c12 38% 55%,transparent 55%),linear-gradient(20deg,#05070a 15%,transparent 15% 30%,#090c12 30% 48%,transparent 48%);filter:drop-shadow(0 -12px 25px rgba(0,0,0,.8))}
+.mountain:after{content:"";position:absolute;left:35%;right:0;bottom:0;height:34%;background:linear-gradient(180deg,transparent,#020305);border-radius:50% 50% 0 0}
+.hero-copy{position:relative;z-index:4;text-align:center;width:92%;transform:translateY(var(--shift,0px));transition:transform .05s linear}.eyebrow{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--violet);margin-bottom:24px}.name{font-size:clamp(70px,15vw,190px);line-height:.78;letter-spacing:-.075em;font-weight:950;margin:0;white-space:nowrap;text-shadow:0 18px 50px rgba(0,0,0,.5)}.surname{font-size:clamp(28px,5vw,70px);letter-spacing:.65em;margin-left:.65em;color:#a48cff;font-weight:600}.role{margin:35px 0 0;font-size:clamp(20px,2.4vw,34px);font-weight:600}.company{color:var(--violet);margin-top:8px;font-size:20px}.tagline{max-width:540px;margin:22px auto;color:var(--muted);line-height:1.6}.scroll{position:absolute;bottom:38px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.2em;color:#888;text-transform:uppercase}.scroll:before{content:"";display:block;margin:0 auto 10px;width:20px;height:34px;border:1px solid #aaa;border-radius:15px}.scroll:after{content:"";position:absolute;left:50%;top:7px;width:2px;height:7px;background:white;border-radius:2px}
+.float{position:absolute;z-index:3;font:11px ui-monospace,monospace;color:#8d909b;letter-spacing:.08em}.f1{top:28%;left:6%}.f2{top:25%;right:8%}.f3{bottom:27%;left:10%}.f4{bottom:29%;right:7%}.float b{color:var(--violet)}
+.section{padding:130px 5vw;border-top:1px solid var(--line);max-width:1500px;margin:auto}.label{font:11px ui-monospace,monospace;color:var(--violet);letter-spacing:.16em;text-transform:uppercase}.title{font-size:clamp(40px,6vw,76px);letter-spacing:-.05em;margin:12px 0 55px}.about{display:grid;grid-template-columns:1.2fr 2fr;gap:7vw}.about p{font-size:18px;line-height:1.9;color:#b0b3bd;max-width:650px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{border:1px solid #20242e;border-radius:14px;padding:25px;background:linear-gradient(145deg,#0b0e14,#07090d);min-height:190px}.card small{color:#8b8f9b;text-transform:uppercase;letter-spacing:.1em}.card h3{font-size:27px;margin:25px 0 8px;letter-spacing:-.04em}.card p{font-size:13px;color:#858995;line-height:1.6}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{min-height:330px;border:1px solid #20242e;border-radius:18px;padding:30px;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 10%,rgba(130,100,255,.13),transparent 30%),#090c12;transition:.35s}.project:hover{transform:translateY(-7px);border-color:#464052}.project h3{font-size:27px;margin-top:170px}.project p{color:#969aa6;max-width:550px;line-height:1.6}.tags{display:flex;gap:7px;flex-wrap:wrap}.tag{padding:6px 10px;border:1px solid #292d38;border-radius:999px;font-size:11px;color:#aaa}
+.cta{text-align:center;padding-bottom:160px}.cta .title{margin-bottom:25px}.button{display:inline-block;border:1px solid var(--violet);padding:14px 25px;border-radius:8px;color:white;transition:.25s}.button:hover{background:rgba(155,124,255,.12);transform:translateY(-2px)}
+footer{border-top:1px solid var(--line);padding:28px 5vw;color:#666b77;font-size:12px;display:flex;justify-content:space-between}
+@media(max-width:800px){.links{display:none}.name{white-space:normal}.surname{letter-spacing:.35em;margin-left:.35em}.about{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.projects{grid-template-columns:1fr}.section{padding-top:90px}.float{display:none}}@media(max-width:520px){.cards{grid-template-columns:1fr}.hero{height:130vh}}
+</style>
 </head>
 <body>
-  <header class="nav">
-    <a class="brand" href="/">TARIQUE<span>.</span></a>
-    <nav>
-      <a href="#work">Work</a>
-      <a href="#lab">Lab</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
+<nav class="nav"><a class="logo" href="#">TH<i></i></a><div class="links"><a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
 
-  <main>
-    <section class="hero">
-      <div class="eyebrow">ENGINEERING LAB · 2026</div>
-      <h1>Building systems,<br /><em>one layer at a time.</em></h1>
-      <p class="hero-copy">
-        Frontend engineer exploring the full stack — distributed systems,
-        AI tooling, search and the engineering ideas behind products that scale.
-      </p>
-      <div class="actions">
-        <a class="button primary" href="#lab">Explore the lab <span>↓</span></a>
-        <a class="button secondary" href="#work">View projects</a>
-      </div>
-    </section>
+<header class="hero">
+  <div class="sticky">
+    <div class="sky"></div><div class="stars"></div><div class="mountain"></div>
+    <div class="float f1" data-depth="1.8">// FRONTEND <b>ENGINEERING</b></div>
+    <div class="float f2" data-depth="2.5">// PERFORMANCE</div>
+    <div class="float f3" data-depth="1.4">// ARCHITECTURE</div>
+    <div class="float f4" data-depth="2.1">// AI / AGENTIC SYSTEMS</div>
+    <div class="hero-copy" id="heroCopy">
+      <div class="eyebrow">BUILDING EXPERIENCES · SOLVING COMPLEX PROBLEMS</div>
+      <h1 class="name">TARIQUE</h1><div class="surname">HUSSAIN</div>
+      <div class="role">Senior Software Engineer</div><div class="company">Microsoft</div>
+      <p class="tagline">I build scalable, high-performance interfaces and intelligent systems for products used at scale.</p>
+    </div>
+    <div class="scroll">Scroll</div>
+  </div>
+</header>
 
-    <section class="signal-grid" id="about">
-      <div class="signal">
-        <span class="label">FOCUS</span>
-        <strong>Full-stack systems</strong>
-        <p>Going deeper than the browser — APIs, data, architecture and reliability.</p>
-      </div>
-      <div class="signal">
-        <span class="label">CURRENTLY</span>
-        <strong>Learning by building</strong>
-        <p>Turning concepts into small systems, then deliberately scaling and breaking them.</p>
-      </div>
-      <div class="signal">
-        <span class="label">INTERESTS</span>
-        <strong>Search · AI · DX</strong>
-        <p>Developer productivity, intelligent search and tools that make engineers faster.</p>
-      </div>
-    </section>
+<section class="section" id="about"><div class="label">Hello</div><h2 class="title">About Me</h2>
+<div class="about"><div><p>I'm a Senior Software Engineer at Microsoft with 9+ years of experience building complex, scalable and high-performance web applications.</p><p>I specialize in frontend engineering, search experiences, performance, architecture and intelligent systems — with a strong bias toward solving hard problems and building products people actually enjoy using.</p></div>
+<div class="cards" id="skills"><div class="card"><small>Experience</small><h3>9+ Years</h3><p>Engineering products and platforms at scale.</p></div><div class="card"><small>Currently</small><h3>Microsoft</h3><p>Senior Software Engineer.</p></div><div class="card"><small>Specializes in</small><h3>Frontend</h3><p>React · TypeScript · Search · Performance · Architecture</p></div><div class="card"><small>Interested in</small><h3>AI</h3><p>Agentic systems, intelligent products and developer experiences.</p></div></div></div></section>
 
-    <section class="section" id="work">
-      <div class="section-head">
-        <span class="label">01 — SELECTED WORK</span>
-        <span class="muted">A few things I'm exploring</span>
-      </div>
+<section class="section" id="work"><div class="label">Selected Work</div><h2 class="title">Things I've Built</h2>
+<div class="projects"><article class="project"><h3>Advanced KQL Search System</h3><p>High-performance search experiences with client-side parsing, intelligent filtering and rich query interactions.</p><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Performance</span></div></article>
+<article class="project"><h3>AI Customer Feedback Analyzer</h3><p>A product concept for turning customer feedback into actionable AI-driven summaries and insights.</p><div class="tags"><span class="tag">Next.js</span><span class="tag">AI</span><span class="tag">SaaS</span></div></article>
+<article class="project"><h3>Agentic AI Systems</h3><p>Exploring orchestrated agents, telemetry analysis and intelligent workflows that turn complex signals into useful decisions.</p><div class="tags"><span class="tag">Agents</span><span class="tag">LLMs</span><span class="tag">Architecture</span></div></article>
+<article class="project"><h3>Interactive Experiences</h3><p>Small experiments focused on interaction design, motion and memorable user experiences.</p><div class="tags"><span class="tag">UX</span><span class="tag">Motion</span><span class="tag">Web</span></div></article></div></section>
 
-      <div class="projects">
-        <article class="project featured">
-          <div class="project-number">01</div>
-          <div>
-            <span class="tag">SEARCH</span>
-            <h2>Search Lab</h2>
-            <p>
-              Experiments around autocomplete, indexing, ranking, latency and
-              client/server trade-offs.
-            </p>
-          </div>
-          <span class="arrow">↗</span>
-        </article>
+<section class="section" id="experience"><div class="label">Experience</div><h2 class="title">Engineering at Scale.</h2><div class="about"><div><p><strong>Microsoft</strong><br>Senior Software Engineer</p></div><div><p>Focused on building sophisticated frontend experiences, solving performance and architecture problems, and working across the boundary between user experience and complex backend systems.</p></div></div></section>
 
-        <article class="project">
-          <div class="project-number">02</div>
-          <div>
-            <span class="tag">SYSTEMS</span>
-            <h2>Notification Engine</h2>
-            <p>Exploring queues, fan-out, delivery guarantees and scalable notifications.</p>
-          </div>
-          <span class="arrow">↗</span>
-        </article>
+<section class="section cta" id="contact"><div class="label">Let's Talk</div><h2 class="title">Have something interesting to build?</h2><a class="button" href="mailto:hello@tarique.dev">Get in touch →</a></section>
+<footer><span>© 2026 Tarique Hussain</span><span>Senior Software Engineer · Microsoft</span></footer>
 
-        <article class="project">
-          <div class="project-number">03</div>
-          <div>
-            <span class="tag">AI</span>
-            <h2>Engineering Agent</h2>
-            <p>Tools for debugging, scorecard analysis and repetitive engineering workflows.</p>
-          </div>
-          <span class="arrow">↗</span>
-        </article>
-      </div>
-    </section>
-
-    <section class="lab" id="lab">
-      <div>
-        <span class="label">02 — THE LAB</span>
-        <h2>Learn it.<br /><em>Build it. Break it.</em></h2>
-      </div>
-      <div class="lab-copy">
-        <p>
-          This site will evolve alongside the experiments behind it.
-          The goal isn't to collect tutorials. It's to build systems,
-          understand their trade-offs, and document what happens when they fail.
-        </p>
-        <div class="mini-stats">
-          <div><strong>01</strong><span>Static site</span></div>
-          <div><strong>02</strong><span>API + data</span></div>
-          <div><strong>03</strong><span>Distributed</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="closing">
-      <span class="label">NEXT</span>
-      <h2>This is version one.</h2>
-      <p>The backend comes later. First, let's get something real on the internet.</p>
-    </section>
-  </main>
-
-  <footer>
-    <span>© 2026 Tarique</span>
-    <span>Built while learning the other half of the stack.</span>
-  </footer>
-</body>
-</html>
+<script>
+const hero=document.querySelector('.hero'), copy=document.querySelector('#heroCopy');
+const floats=[...document.querySelectorAll('.float')];
+function parallax(){
+ const rect=hero.getBoundingClientRect(), progress=Math.max(0,Math.min(1,-rect.top/(hero.offsetHeight-innerHeight)));
+ copy.style.transform=`translateY(${progress*-180}px) scale(${1-progress*.08})`;
+ floats.forEach((el,i)=>el.style.transform=`translate3d(0,${progress*-120*+el.dataset.depth}px,0)`);
+}
+addEventListener('scroll',parallax,{passive:true});parallax();
+</script>
+</body></html>
